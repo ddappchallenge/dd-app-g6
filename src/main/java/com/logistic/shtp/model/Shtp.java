@@ -1,6 +1,7 @@
 package com.logistic.shtp.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -31,9 +32,10 @@ public class Shtp {
     public static List<Node> getShortestPath(Node dest) {
         List<Node> path = new ArrayList<>();
         for (Node target = dest; target != null; target = target.getPreviousNode()) {
-
+            path.add(target);
         }
-
+        
+        Collections.reverse(path);
         return path;
     }
 
