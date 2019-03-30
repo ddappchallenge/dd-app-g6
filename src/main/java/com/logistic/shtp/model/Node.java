@@ -54,5 +54,9 @@ public class Node implements Comparable<Node>{
     public int compareTo(Node o) {
         return Double.compare(minDistance, o.minDistance);
     }
+
+    public String toString() {
+        return this.name;
+    }
     
 }
