@@ -23,6 +23,8 @@ public class ShtpController {
 
     @GetMapping("/graph/shortestPath")
     public ResponseEntity getOneShortestPath(@RequestParam String src, @RequestParam String dest) {
+        shtpService.findFirstShortestPath(src, dest);
+
         return null;
     }
 

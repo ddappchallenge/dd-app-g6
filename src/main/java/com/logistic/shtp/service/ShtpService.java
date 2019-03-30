@@ -11,7 +11,7 @@ public class ShtpService {
         return true;
     }
 
-    public boolean findFirstShortestPath() {
+    public boolean findFirstShortestPath(String src, String dest) {
 
         return true;
     }
@@ -23,7 +23,7 @@ public class ShtpService {
 
     public boolean findShortestPath(String src, String dest) {
 
-        
+
         return true;
     }
 
