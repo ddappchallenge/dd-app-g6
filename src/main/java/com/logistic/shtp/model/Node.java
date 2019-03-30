@@ -2,7 +2,7 @@ package com.logistic.shtp.model;
 
 import java.util.ArrayList;
 
-public class Node {
+public class Node implements Comparable<Node>{
     private String name;
     private ArrayList<Edge> path;
     private int minDistance = Integer.MAX_VALUE;
@@ -10,6 +10,7 @@ public class Node {
 
     public Node(String name) {
         this.name = name;
+        path = new ArrayList<>();
     }
 
     public String getName() {
@@ -45,7 +46,13 @@ public class Node {
     }
 
     public boolean addPath(Edge e) {
-        return path.add(e);
+        System.out.println("Adding..." + e);
+        path.add(e);
+        return true;
+    }
+
+    public int compareTo(Node o) {
+        return Double.compare(minDistance, o.minDistance);
     }
     
 }

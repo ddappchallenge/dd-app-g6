@@ -32,10 +32,10 @@ public class Shtp {
     public static List<Node> getShortestPath(Node dest) {
         List<Node> path = new ArrayList<>();
         for (Node target = dest; target != null; target = target.getPreviousNode()) {
-            path.add(target);
+            path.add(target); // C B A
         }
-        
-        Collections.reverse(path);
+
+        Collections.reverse(path); // A B C
         return path;
     }
 
