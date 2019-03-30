@@ -1,0 +1,6 @@
+{
+    "scripts": {
+      "dev": "./gradlew build && ./gradlew bootRun"
+    }
+  }
+  
