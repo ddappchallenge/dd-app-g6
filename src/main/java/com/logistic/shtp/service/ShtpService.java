@@ -3,6 +3,7 @@ package com.logistic.shtp.service;
 import java.util.List;
 
 import com.logistic.shtp.model.Edge;
+import com.logistic.shtp.model.GraphInput;
 import com.logistic.shtp.model.Node;
 import com.logistic.shtp.model.Shtp;
 
@@ -11,12 +12,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class ShtpService {
 
-    public boolean create() {
+    private GraphInput graphInput;
 
+    public GraphInput create(GraphInput graphInput) {
 
-        return true;
+        this.graphInput = graphInput;
+        return graphInput;
     }
 
+    public GraphInput getGraph(){
+        return this.graphInput;
+    }
     public boolean findFirstShortestPath(String src, String dest) {
 
         return true;
